@@ -1,6 +1,6 @@
 package com.company.Clases;
 
-public class Personal {
+public class Empleados {
 
     String nombres, apellidos, fechaNacimiento, direccion, correo;
 
@@ -44,11 +44,19 @@ public class Personal {
         this.correo = correo;
     }
 
-    public Personal(String nombres, String apellidos, String fechaNacimiento, String direccion, String correo) {
+    public Empleados() {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
         this.correo = correo;
     }
+
+    /*public Personal(String nombres, String apellidos, String fechaNacimiento, String direccion, String correo) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.correo = correo;
+    }*/
 }

@@ -1,16 +1,14 @@
 package com.company.Vista;
 
-import com.company.Clases.Personal;
+import com.company.Clases.Empleados;
+import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class FrmRegistrarEmpleados {
     private JPanel panelPrincipal;
@@ -23,33 +21,81 @@ public class FrmRegistrarEmpleados {
     private JButton btnGuardar;
     private JTable TbEmpleado;
     private JButton bntEliminar;
-    private JButton button1;
     private JTextField txtBuscar;
     private JButton btnBuscar;
-    ArrayList<Personal> lista = new ArrayList<Personal>();
+    ArrayList<Empleados> lista = new ArrayList<Empleados>();
     DefaultTableModel tbmodel = (DefaultTableModel) TbEmpleado.getModel();
-    TableRowSorter<TableModel> tr;
+    TableRowSorter<DefaultTableModel> tr;
+
+    String Nombre, Apellido, Direccion, Correo, Fecha;
 
     public JPanel getRootPanel() {
         return panelPrincipal;
     }
 
     public FrmRegistrarEmpleados(){
+
         listar();
+
 
         btnGuardar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Personal per= new Personal(txtNombre.getText(),txtApellido.getText(),txtFecha.getText(), txtDireccion.getText(), txtCorreo.getText());
-                if (per.equals(null)){
-                    JOptionPane.showMessageDialog( null, "Error registrar");
-                }else {
-                    JOptionPane.showMessageDialog( null, "Se registro correctamente");
-                }
-                lista.add(per);
-                listar();
+                //Arreglo
+                final Object[] row = new Object[5];
+                row[0] = txtNombre.getText();
+                row[1] = txtApellido.getText();
+                row[2] = txtDireccion.getText();
+                row[3] = txtCorreo.getText();
+                row[4] = txtFecha.getText();
+
+                //obj.setNombres((String) row[0]);
+
+                tbmodel.addRow(row);
+
                 Limpiar();
+
+                //fila[5]=txtCorreo.getSelectedItem().toString();
+
+                //String dato[] = {txtNombre.getText(),txtApellido.getText(),txtDireccion.getText(),txtCorreo.getText(),txtFecha.getText()};
+
+                //tbmodel.addRow(dato);
+
+                //TbEmpleado.setModel(tbmodel);
+
+
+
+                /*Nombre= txtNombre.getText();
+                Apellido= txtApellido.getText();
+                Direccion= txtDireccion.getText();
+                Correo= txtCorreo.getText();
+                Fecha= txtFecha.getText();
+                //new Personal[]{obj}
+                Personal obj = new Personal();
+                        //{obj.setNombres(Nombre),obj.setApellidos(Apellido),obj.setDireccion(Direccion),obj.setCorreo(Correo),obj.setFechaNacimiento(Fecha)}
+
+                obj.setNombres(Nombre);
+                obj.setApellidos(Apellido);
+                obj.setDireccion(Direccion);
+                obj.setCorreo(Correo);
+                obj.setFechaNacimiento(Fecha);
+
+                if (obj.getNombres().isEmpty() || obj.getApellidos().isEmpty()|| obj.getDireccion().isEmpty()|| obj.getCorreo().isEmpty()|| obj.getFechaNacimiento().isEmpty()){
+                    JOptionPane.showMessageDialog( null, "Los campos deden estar llenos");
+                }
+                else if (obj.equals(null)){
+                    JOptionPane.showMessageDialog( null, "Error registrar");
+                }else{
+                    JOptionPane.showMessageDialog( null, "Se registro correctamente");
+                    lista.add(obj);
+                    //tbmodel.addRow();
+                    listar();
+                    Limpiar();
+                }*/
+
+                //listar();
+
             }
         });
 
@@ -82,10 +128,9 @@ public class FrmRegistrarEmpleados {
         bntEliminar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
-                if (TbEmpleado.getSelectedColumn()>=0){
-                    tbmodel.removeRow(TbEmpleado.getSelectedRow());
+                int dto = TbEmpleado.getSelectedRow();
+                if (dto>=0){
+                    tbmodel.removeRow(dto);
                     JOptionPane.showMessageDialog( null, "Se elimino correctamente");
                 }else {
                     JOptionPane.showMessageDialog( null, "Error al eliminar");
@@ -100,13 +145,25 @@ public class FrmRegistrarEmpleados {
             @Override
             public void keyPressed(KeyEvent e) {
                 //JOptionPane.showMessageDialog( null, "Demo");
-                tr.setRowFilter(RowFilter.regexFilter(txtBuscar.getText()));
+                //tr.setRowFilter(RowFilter.regexFilter(txtBuscar.getText(),1));
+                //tr= new TableRowSorter<>(tbmodel);
+                //TbEmpleado.setRowSorter(tr);
+
             }
         });
         btnBuscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Buscar();
+            }
+        });
+        txtFecha.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                Calendar cal = Calendar.getInstance();
+                JDateChooser date = new JDateChooser(cal.getTime());
+                date.setDateFormatString("dd/MM/yyyy");
+                txtFecha.add(date);
             }
         });
     }
@@ -121,8 +178,20 @@ public class FrmRegistrarEmpleados {
         txtNombre.requestFocus();
     }
 
+    public void registrar(){
+
+    }
+
     public void listar(){
-        String matris [][] = new String[lista.size()][5];
+
+        Object[] column = {"Nombre","Apellido","Dirección","Correo","FechaNacimiento"};
+        Object[] row =new Object[0];
+        tbmodel.setColumnIdentifiers(column);
+        TbEmpleado.setModel(tbmodel);
+        TbEmpleado.setAutoCreateRowSorter(true);
+        tr = new  TableRowSorter<>(tbmodel);
+        TbEmpleado.setRowSorter(tr);
+        /*String matris [][] = new String[lista.size()][5];
 
         for (int i=0; i<lista.size(); i++){
             matris[i][0]=lista.get(i).getNombres();
@@ -135,44 +204,37 @@ public class FrmRegistrarEmpleados {
         TbEmpleado.setModel(new DefaultTableModel(
                 matris,
                 new String []{"Nombre","Apellido","Dirección","Correo","Fecha de Nacimiento"}
-        ));
+        ));*/
     }
 
     public void editar(){
 
-        String Nombre, Apellido, Direccion, Correo, Fecha;
+        int dto = TbEmpleado.getSelectedRow();
 
-        if (TbEmpleado.getSelectedColumn() >=0){
+        if ( dto >=0){
 
-            Nombre= txtNombre.getText();
-            Apellido= txtApellido.getText();
-            Direccion=txtDireccion.getText();
-            Correo=txtCorreo.getText();
-            Fecha=txtFecha.getText();
-
-            TbEmpleado.setValueAt(Nombre, TbEmpleado.getSelectedRow(),0);
-            TbEmpleado.setValueAt(Apellido, TbEmpleado.getSelectedRow(),1);
-            TbEmpleado.setValueAt(Direccion, TbEmpleado.getSelectedRow(),2);
-            TbEmpleado.setValueAt(Correo, TbEmpleado.getSelectedRow(),3);
-            TbEmpleado.setValueAt(Fecha, TbEmpleado.getSelectedRow(),4);
+            TbEmpleado.setValueAt(txtNombre.getText(), dto,0);
+            TbEmpleado.setValueAt(txtApellido.getText(), dto,1);
+            TbEmpleado.setValueAt(txtDireccion.getText(), dto,2);
+            TbEmpleado.setValueAt(txtCorreo.getText(), dto,3);
+            TbEmpleado.setValueAt(txtFecha.getText(), dto,4);
 
             JOptionPane.showMessageDialog( null, "Se Actulizo correctamente");
+
         }else {
             JOptionPane.showMessageDialog( null, "Error al Actulizar");
         }
-        Limpiar();
-
-
 
     }
     public void Buscar(){
-        String filtro=txtBuscar.getText();
-        if(!filtro.equals("")){
-            tr.setRowFilter(RowFilter.regexFilter(filtro));
-        }else{
-            tr.setRowFilter(null);
+
+        try {
+            tr.setRowFilter(RowFilter.regexFilter(txtBuscar.getText()));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog( null, "Error al Buscar");
         }
 
     }
+
 
 }
