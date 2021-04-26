@@ -13,8 +13,8 @@ import java.util.Calendar;
 public class FrmRegistrarEmpleados {
     private JPanel panelPrincipal;
     private JTextField txtNombre;
-    private JTextField txtApellido;
-    private JTextField txtFecha;
+//    private JTextField txtApellido;
+    private JTextField txtCelular;
     private JTextField txtDireccion;
     private JTextField txtCorreo;
     private JButton btnEditar;
@@ -45,10 +45,10 @@ public class FrmRegistrarEmpleados {
                 //Arreglo
                 final Object[] row = new Object[5];
                 row[0] = txtNombre.getText();
-                row[1] = txtApellido.getText();
-                row[2] = txtDireccion.getText();
-                row[3] = txtCorreo.getText();
-                row[4] = txtFecha.getText();
+//                row[1] = txtApellido.getText();
+                row[1] = txtCelular.getText();
+                row[2] = txtCorreo.getText();
+                row[3] = txtDireccion.getText();
 
                 //obj.setNombres((String) row[0]);
 
@@ -118,10 +118,10 @@ public class FrmRegistrarEmpleados {
 
                 int i = TbEmpleado.getSelectedRow();
                 txtNombre.setText(TbEmpleado.getValueAt(i,0).toString());
-                txtApellido.setText(TbEmpleado.getValueAt(i,1).toString());
-                txtDireccion.setText(TbEmpleado.getValueAt(i,2).toString());
-                txtCorreo.setText(TbEmpleado.getValueAt(i,3).toString());
-                txtFecha.setText(TbEmpleado.getValueAt(i,4).toString());
+//                txtApellido.setText(TbEmpleado.getValueAt(i,1).toString());
+                txtCelular.setText(TbEmpleado.getValueAt(i,1).toString());
+                txtCorreo.setText(TbEmpleado.getValueAt(i,2).toString());
+                txtDireccion.setText(TbEmpleado.getValueAt(i,3).toString());
             }
         });
 
@@ -157,23 +157,24 @@ public class FrmRegistrarEmpleados {
                 Buscar();
             }
         });
-        txtFecha.addKeyListener(new KeyAdapter() {
+        txtCelular.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                Calendar cal = Calendar.getInstance();
+                System.out.println(e);
+                /*Calendar cal = Calendar.getInstance();
                 JDateChooser date = new JDateChooser(cal.getTime());
                 date.setDateFormatString("dd/MM/yyyy");
-                txtFecha.add(date);
+                txtCelular.add(date);*/
             }
         });
     }
 
     public void Limpiar(){
         txtNombre.setText("");
-        txtApellido.setText("");
+//        txtApellido.setText("");
         txtDireccion.setText("");
         txtCorreo.setText("");
-        txtFecha.setText("");
+        txtCelular.setText("");
 
         txtNombre.requestFocus();
     }
@@ -184,7 +185,7 @@ public class FrmRegistrarEmpleados {
 
     public void listar(){
 
-        Object[] column = {"Nombre","Apellido","Dirección","Correo","FechaNacimiento"};
+        Object[] column = {"Nombre","Celular","Correo","Dirección"};
         Object[] row =new Object[0];
         tbmodel.setColumnIdentifiers(column);
         TbEmpleado.setModel(tbmodel);
@@ -214,10 +215,10 @@ public class FrmRegistrarEmpleados {
         if ( dto >=0){
 
             TbEmpleado.setValueAt(txtNombre.getText(), dto,0);
-            TbEmpleado.setValueAt(txtApellido.getText(), dto,1);
-            TbEmpleado.setValueAt(txtDireccion.getText(), dto,2);
-            TbEmpleado.setValueAt(txtCorreo.getText(), dto,3);
-            TbEmpleado.setValueAt(txtFecha.getText(), dto,4);
+//            TbEmpleado.setValueAt(txtApellido.getText(), dto,1);
+            TbEmpleado.setValueAt(txtCelular.getText(), dto,1);
+            TbEmpleado.setValueAt(txtCorreo.getText(), dto,2);
+            TbEmpleado.setValueAt(txtDireccion.getText(), dto,3);
 
             JOptionPane.showMessageDialog( null, "Se Actulizo correctamente");
 

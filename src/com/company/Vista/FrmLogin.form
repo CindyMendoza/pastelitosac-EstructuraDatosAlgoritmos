@@ -26,7 +26,7 @@
             </constraints>
             <properties>
               <font name="Arial Unicode MS" style="1"/>
-              <text value="Iniciara Seccion "/>
+              <text value="Iniciar Sesión "/>
             </properties>
           </component>
         </children>
@@ -66,7 +66,7 @@
                 </constraints>
                 <properties>
                   <font name="Arial Black" style="1"/>
-                  <text value="Contrasña :"/>
+                  <text value="Contraseña :"/>
                 </properties>
               </component>
             </children>
@@ -128,7 +128,7 @@
             </constraints>
             <properties>
               <background color="-14179447"/>
-              <text value="Inicar"/>
+              <text value="Iniciar"/>
             </properties>
           </component>
           <component id="2a249" class="javax.swing.JButton" binding="btnCancelar">
