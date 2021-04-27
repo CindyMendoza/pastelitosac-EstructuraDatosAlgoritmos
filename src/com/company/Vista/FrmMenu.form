@@ -24,7 +24,7 @@
             </constraints>
             <properties>
               <enabled value="true"/>
-              <text value="Bienvenido al sisitema"/>
+              <text value="Bienvenido al sistema"/>
             </properties>
           </component>
           <hspacer id="11b3b">

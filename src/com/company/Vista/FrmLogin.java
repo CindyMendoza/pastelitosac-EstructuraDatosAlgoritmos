@@ -44,11 +44,11 @@ public class FrmLogin {
                 obj.setPassword(Pass);
 
                 if (obj.getUsuario().isEmpty() || obj.getPassword().isEmpty()){
-                    JOptionPane.showMessageDialog( null, "Los campos deden estar llenos");
+                    JOptionPane.showMessageDialog( null, "Los campos deben estar llenos");
                 }
                 else if(obj.getUsuario().equals("adm") && obj.getPassword().equals("123"))
                 {
-                    JOptionPane.showMessageDialog( null, "Biemvenidos");
+                    JOptionPane.showMessageDialog( null, "Bienvenidos");
 
                     FrmMenu ui = new FrmMenu();
                     JPanel jp = ui.getRootPanel();
@@ -61,7 +61,7 @@ public class FrmLogin {
 
                 }
                 else {
-                    JOptionPane.showMessageDialog( null, "Usuario y contraseña Incorrecta");
+                    JOptionPane.showMessageDialog( null, "Usuario y contraseña incorrecta");
                 }
             }
         });

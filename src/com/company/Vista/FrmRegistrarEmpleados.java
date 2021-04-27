@@ -4,6 +4,8 @@ import com.company.Clases.Empleados;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.event.*;
@@ -52,9 +54,18 @@ public class FrmRegistrarEmpleados {
 
                 //obj.setNombres((String) row[0]);
 
-                tbmodel.addRow(row);
 
-                Limpiar();
+                if (txtNombre.getText().length()==0 || txtCelular.getText().length()==0 || txtCorreo.getText().length()==0 || txtDireccion.getText().length()==0){
+                    JOptionPane.showMessageDialog( null, "Debe llenar los datos solicitados");
+                }
+                else {
+                    tbmodel.addRow(row);
+                    Limpiar();
+                }
+
+
+
+
 
                 //fila[5]=txtCorreo.getSelectedItem().toString();
 
