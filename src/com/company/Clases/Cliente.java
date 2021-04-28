@@ -2,7 +2,7 @@ package com.company.Clases;
 
 public class Cliente {
 
-    String idClinete, Nombres, telefono, correo, direccion;
+    String idClinete, nombres, telefono, correo, direccion;
 
     public String getIdClinete() {
         return idClinete;
@@ -13,11 +13,11 @@ public class Cliente {
     }
 
     public String getNombres() {
-        return Nombres;
+        return nombres;
     }
 
     public void setNombres(String nombres) {
-        Nombres = nombres;
+        nombres = nombres;
     }
 
     public String getTelefono() {
@@ -44,9 +44,16 @@ public class Cliente {
         this.direccion = direccion;
     }
 
+    public Cliente() {
+        this.idClinete = idClinete;
+        this.nombres = nombres;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.direccion = direccion;
+    }
     public Cliente(String idClinete, String nombres, String telefono, String correo, String direccion) {
         this.idClinete = idClinete;
-        Nombres = nombres;
+        this.nombres = nombres;
         this.telefono = telefono;
         this.correo = correo;
         this.direccion = direccion;

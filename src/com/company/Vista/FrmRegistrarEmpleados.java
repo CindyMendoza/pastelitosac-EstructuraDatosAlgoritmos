@@ -42,19 +42,29 @@ public class FrmRegistrarEmpleados {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+
+
+                if (txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty()|| txtDireccion.getText().isEmpty()|| txtCorreo.getText().isEmpty()|| txtFecha.getText().isEmpty()){
+                    JOptionPane.showMessageDialog( null, "Los campos deden estar llenos");
+                }
+                else{
+                    final Object[] row = new Object[5];
+                    row[0] = txtNombre.getText();
+                    row[1] = txtApellido.getText();
+                    row[2] = txtDireccion.getText();
+                    row[3] = txtCorreo.getText();
+                    row[4] = txtFecha.getText();
+
+                    //obj.setNombres((String) row[0]);
+
+                    tbmodel.addRow(row);
+
+                    Limpiar();
+                    JOptionPane.showMessageDialog( null, "Se registro correctamente");
+
+                }
                 //Arreglo
-                final Object[] row = new Object[5];
-                row[0] = txtNombre.getText();
-                row[1] = txtApellido.getText();
-                row[2] = txtDireccion.getText();
-                row[3] = txtCorreo.getText();
-                row[4] = txtFecha.getText();
 
-                //obj.setNombres((String) row[0]);
-
-                tbmodel.addRow(row);
-
-                Limpiar();
 
                 //fila[5]=txtCorreo.getSelectedItem().toString();
 
@@ -66,11 +76,15 @@ public class FrmRegistrarEmpleados {
 
 
 
-                /*Nombre= txtNombre.getText();
+                /*
+                Empleados obj = new Empleados();
+
+                txtNombre.setText(obj.getNombres());
                 Apellido= txtApellido.getText();
                 Direccion= txtDireccion.getText();
                 Correo= txtCorreo.getText();
                 Fecha= txtFecha.getText();
+
                 //new Personal[]{obj}
                 Personal obj = new Personal();
                         //{obj.setNombres(Nombre),obj.setApellidos(Apellido),obj.setDireccion(Direccion),obj.setCorreo(Correo),obj.setFechaNacimiento(Fecha)}
