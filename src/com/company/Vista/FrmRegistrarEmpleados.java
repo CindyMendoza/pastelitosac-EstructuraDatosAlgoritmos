@@ -4,6 +4,8 @@ import com.company.Clases.Empleados;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.event.*;
@@ -13,8 +15,8 @@ import java.util.Calendar;
 public class FrmRegistrarEmpleados {
     private JPanel panelPrincipal;
     private JTextField txtNombre;
-    private JTextField txtApellido;
-    private JTextField txtFecha;
+//    private JTextField txtApellido;
+    private JTextField txtCelular;
     private JTextField txtDireccion;
     private JTextField txtCorreo;
     private JButton btnEditar;
@@ -44,7 +46,16 @@ public class FrmRegistrarEmpleados {
 
 
 
-                if (txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty()|| txtDireccion.getText().isEmpty()|| txtCorreo.getText().isEmpty()|| txtFecha.getText().isEmpty()){
+                //Arreglo
+                final Object[] row = new Object[5];
+                row[0] = txtNombre.getText();
+//                row[1] = txtApellido.getText();
+                row[1] = txtCelular.getText();
+                row[2] = txtCorreo.getText();
+                row[3] = txtDireccion.getText();
+
+
+               /* if (txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty()|| txtDireccion.getText().isEmpty()|| txtCorreo.getText().isEmpty()|| txtFecha.getText().isEmpty()){
                     JOptionPane.showMessageDialog( null, "Los campos deden estar llenos");
                 }
                 else{
@@ -63,7 +74,17 @@ public class FrmRegistrarEmpleados {
                     JOptionPane.showMessageDialog( null, "Se registro correctamente");
 
                 }
-                //Arreglo
+                //Arreglo*/
+
+
+                if (txtNombre.getText().length()==0 || txtCelular.getText().length()==0 || txtCorreo.getText().length()==0 || txtDireccion.getText().length()==0){
+                    JOptionPane.showMessageDialog( null, "Debe llenar los datos solicitados");
+                }
+                else {
+                    tbmodel.addRow(row);
+                    Limpiar();
+                }
+
 
 
                 //fila[5]=txtCorreo.getSelectedItem().toString();
@@ -132,10 +153,10 @@ public class FrmRegistrarEmpleados {
 
                 int i = TbEmpleado.getSelectedRow();
                 txtNombre.setText(TbEmpleado.getValueAt(i,0).toString());
-                txtApellido.setText(TbEmpleado.getValueAt(i,1).toString());
-                txtDireccion.setText(TbEmpleado.getValueAt(i,2).toString());
-                txtCorreo.setText(TbEmpleado.getValueAt(i,3).toString());
-                txtFecha.setText(TbEmpleado.getValueAt(i,4).toString());
+//                txtApellido.setText(TbEmpleado.getValueAt(i,1).toString());
+                txtCelular.setText(TbEmpleado.getValueAt(i,1).toString());
+                txtCorreo.setText(TbEmpleado.getValueAt(i,2).toString());
+                txtDireccion.setText(TbEmpleado.getValueAt(i,3).toString());
             }
         });
 
@@ -171,23 +192,24 @@ public class FrmRegistrarEmpleados {
                 Buscar();
             }
         });
-        txtFecha.addKeyListener(new KeyAdapter() {
+        txtCelular.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                Calendar cal = Calendar.getInstance();
+                System.out.println(e);
+                /*Calendar cal = Calendar.getInstance();
                 JDateChooser date = new JDateChooser(cal.getTime());
                 date.setDateFormatString("dd/MM/yyyy");
-                txtFecha.add(date);
+                txtCelular.add(date);*/
             }
         });
     }
 
     public void Limpiar(){
         txtNombre.setText("");
-        txtApellido.setText("");
+//        txtApellido.setText("");
         txtDireccion.setText("");
         txtCorreo.setText("");
-        txtFecha.setText("");
+        txtCelular.setText("");
 
         txtNombre.requestFocus();
     }
@@ -198,7 +220,7 @@ public class FrmRegistrarEmpleados {
 
     public void listar(){
 
-        Object[] column = {"Nombre","Apellido","Dirección","Correo","FechaNacimiento"};
+        Object[] column = {"Nombre","Celular","Correo","Dirección"};
         Object[] row =new Object[0];
         tbmodel.setColumnIdentifiers(column);
         TbEmpleado.setModel(tbmodel);
@@ -228,10 +250,10 @@ public class FrmRegistrarEmpleados {
         if ( dto >=0){
 
             TbEmpleado.setValueAt(txtNombre.getText(), dto,0);
-            TbEmpleado.setValueAt(txtApellido.getText(), dto,1);
-            TbEmpleado.setValueAt(txtDireccion.getText(), dto,2);
-            TbEmpleado.setValueAt(txtCorreo.getText(), dto,3);
-            TbEmpleado.setValueAt(txtFecha.getText(), dto,4);
+//            TbEmpleado.setValueAt(txtApellido.getText(), dto,1);
+            TbEmpleado.setValueAt(txtCelular.getText(), dto,1);
+            TbEmpleado.setValueAt(txtCorreo.getText(), dto,2);
+            TbEmpleado.setValueAt(txtDireccion.getText(), dto,3);
 
             JOptionPane.showMessageDialog( null, "Se Actulizo correctamente");
 

@@ -52,7 +52,7 @@ public class FrmListClinte extends FrmPedido {
 
                 int i = TbListaCliente.getSelectedRow();
 
-                fr.setTxtCliente(TbListaCliente.getValueAt(i,1).toString());
+                //fr.setTxtCliente(TbListaCliente.getValueAt(i,1).toString());
 
             }
         });
