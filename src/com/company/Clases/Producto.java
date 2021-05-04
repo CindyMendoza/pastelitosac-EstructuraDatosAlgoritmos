@@ -1,33 +1,34 @@
 package com.company.Clases;
 
 public class Producto {
-    int IdProducto;
-    String NombreProducto;
-    double PrecioUni;
+    String nombreProducto;
+    double precioUnitario;
     int stock;
 
-    public int getIdProducto() {
-        return IdProducto;
-    }
+    public Object[] getObjetRow(){
+        final Object[] row = new Object[6];
 
-    public void setIdProducto(int idProducto) {
-        IdProducto = idProducto;
+        row[0] = nombreProducto;
+        row[1] = String.valueOf(precioUnitario);
+        row[2] = String.valueOf(stock);
+
+        return row;
     }
 
     public String getNombreProducto() {
-        return NombreProducto;
+        return nombreProducto;
     }
 
     public void setNombreProducto(String nombreProducto) {
-        NombreProducto = nombreProducto;
+        nombreProducto = nombreProducto;
     }
 
     public double getPrecioUni() {
-        return PrecioUni;
+        return precioUnitario;
     }
 
     public void setPrecioUni(double precioUni) {
-        PrecioUni = precioUni;
+        precioUnitario = precioUni;
     }
 
     public int getStock() {
@@ -38,10 +39,9 @@ public class Producto {
         this.stock = stock;
     }
 
-    public Producto(int idProducto, String nombreProducto, double precioUni, int stock) {
-        IdProducto = idProducto;
-        NombreProducto = nombreProducto;
-        PrecioUni = precioUni;
+    public Producto(String nombreProducto, double precioUni, int stock) {
+        this.nombreProducto = nombreProducto;
+        this.precioUnitario = precioUni;
         this.stock = stock;
     }
 }

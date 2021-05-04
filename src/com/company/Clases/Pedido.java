@@ -2,73 +2,115 @@ package com.company.Clases;
 
 public class Pedido {
 
-    String nombreProduto ;
-    Double precioUni;
-    Double precioTotal;
-    int Cantidad;
-    Pedido idPedido;
-    Cliente idClinete;
-    int delivery;
+    public String nombreCliente,
+    nombreProducto,
+    idPedido, idCliente;
 
-    public String getNombreProduto() {
-        return nombreProduto;
+    public Double precioUnitario,
+            total;
+
+    public int cantidad;
+
+    public Boolean pedidoExpress;
+
+    public Pedido(String nombreCliente,
+                  String nombreProducto,
+                  Double precioUnitario,
+                  int cantidad,
+                  Double total,
+                  String idPedido,
+                  String idCliente,
+                  Boolean pedidoExpress) {
+
+        this.nombreCliente = nombreCliente;
+        this.nombreProducto = nombreProducto;
+        this.precioUnitario = precioUnitario;
+        this.cantidad = cantidad;
+        this.total = total;
+        this.idPedido = idPedido;
+        this.idCliente = idCliente;
+        this.pedidoExpress = pedidoExpress;
     }
 
-    public void setNombreProduto(String nombreProduto) {
-        this.nombreProduto = nombreProduto;
+    public Object[] getObjetRow(){
+        final Object[] row = new Object[6];
+
+        row[0] = nombreCliente;
+        row[1] = nombreProducto;
+        row[2] = precioUnitario.toString();
+        row[3] = String.valueOf(cantidad);
+        row[4] = total.toString();
+
+        if(pedidoExpress){
+            row[5] = "Si";
+        } else {
+            row[5] = "No";
+        }
+
+        return row;
     }
 
-    public Double getPrecioUni() {
-        return precioUni;
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setPrecioUni(Double precioUni) {
-        this.precioUni = precioUni;
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 
-    public Double getPrecioTotal() {
-        return precioTotal;
+    public String getNombreProducto() {
+        return nombreProducto;
     }
 
-    public void setPrecioTotal(Double precioTotal) {
-        this.precioTotal = precioTotal;
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
     }
 
-    public int getCantidad() {
-        return Cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        Cantidad = cantidad;
-    }
-
-    public Pedido getIdPedido() {
+    public String getIdPedido() {
         return idPedido;
     }
 
-    public void setIdPedido(Pedido idPedido) {
+    public void setIdPedido(String idPedido) {
         this.idPedido = idPedido;
     }
 
-    public Cliente getIdClinete() {
-        return idClinete;
+    public String getIdCliente() {
+        return idCliente;
     }
 
-    public void setIdClinete(Cliente idClinete) {
-        this.idClinete = idClinete;
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public void setDelivery(int delivery) {
-        this.delivery = delivery;
+    public Double getPrecioUnitario() {
+        return precioUnitario;
     }
 
-    public Pedido(String nombreProduto, Double precioUni, Double precioTotal, int cantidad, Pedido idPedido, Cliente idClinete, int delivery) {
-        this.nombreProduto = nombreProduto;
-        this.precioUni = precioUni;
-        this.precioTotal = precioTotal;
-        Cantidad = cantidad;
-        this.idPedido = idPedido;
-        this.idClinete = idClinete;
-        this.delivery = delivery;
+    public void setPrecioUnitario(Double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Boolean getPedidoExpress() {
+        return pedidoExpress;
+    }
+
+    public void setPedidoExpress(Boolean pedidoExpress) {
+        this.pedidoExpress = pedidoExpress;
     }
 }

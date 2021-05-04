@@ -3,9 +3,10 @@ package com.company.Vista;
 import com.company.Clases.Usuario;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static com.company.Main.Registrar;
 
 public class FrmLogin {
     private JPanel PanelLogin;
@@ -19,15 +20,19 @@ public class FrmLogin {
     public JPanel getRootPanel() {
 
         return PanelLogin;
-        
-        
+
     }
     public FrmLogin(){
 
-        imgLogin ing = new imgLogin();
 
         this.setContentPane();
 
+        btnCancelar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
         BtnIngresar.addActionListener(new ActionListener() {
             @Override
@@ -55,30 +60,35 @@ public class FrmLogin {
                     JFrame frame = new JFrame();
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     frame.setContentPane(jp);
-                    frame.pack();
                     frame.setLocationRelativeTo(null);
-                    frame.setVisible(true);
+                    frame.pack();
+                    Registrar();
+                    frame.setVisible(false);
+
 
                 }
+
+
                 else {
+
                     JOptionPane.showMessageDialog( null, "Usuario y contraseña incorrecta");
+                    FrmMenu ui = new FrmMenu();
+                    JPanel jp = ui.getRootPanel();
+                    JFrame frame = new JFrame();
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame.setContentPane(jp);
+                    frame.pack();
+                    frame.setLocationRelativeTo(null);
+                    frame.setVisible(false);
+
                 }
             }
         });
+
     }
+
 
     private void setContentPane() {
-    }
-
-    class imgLogin extends JPanel{
-        private Image imagen;
-
-        public void paint(Graphics e){
-            imagen = new ImageIcon(getClass().getResource("Login.png")).getImage();
-            e.drawImage(imagen,0,0,getWidth(),getHeight(), this);
-            setOpaque(false);
-            super.paint(e);
-        }
     }
 
 }

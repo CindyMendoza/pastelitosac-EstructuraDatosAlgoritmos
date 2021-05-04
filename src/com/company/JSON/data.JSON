@@ -1,0 +1,70 @@
+{
+  "pedidos": [{
+  "nombreCliente": "Joe",
+  "idCliente": 54874541,
+  "nombreProducto": "Torta1",
+  "idPedido": "dfsdfasd212312",
+  "precioUnitario": 20,
+  "cantidad": 12,
+  "total": 10.0,
+  "pedidoExpress": false
+},
+  {
+  "nombreCliente": "Joe",
+  "idCliente": 54874541,
+  "nombreProducto": "Torta1",
+  "idPedido": "dfsdfasd212312",
+  "precioUnitario": 20,
+  "cantidad": 12,
+  "total": 120.0,
+  "pedidoExpress": false
+  }
+],
+"clientes": [{
+  "nombreCompleto": "Juan Peréz",
+  "idCliente":  "45879878",
+  "celular":  "95478457",
+  "correo":  "jperez@casa.com",
+  "direccion":  "Av. Huarochirí"
+},
+  {
+    "nombreCompleto": "Vickbart",
+    "idCliente":  "45787112",
+    "celular":  "87445754",
+    "correo":  "vickbart@pastelito.com",
+    "direccion":  "Av. Los Ruiseñores"
+  }
+],
+  "productos": [
+    {
+      "nombreProducto": "Seleccione:",
+      "precioUnitario": 0,
+      "stock": 0
+    },{
+    "nombreProducto": "Cheesecake",
+    "precioUnitario": 30.5,
+    "stock": 20
+  },
+    {
+      "nombreProducto": "Tiramisú",
+      "precioUnitario": 18,
+      "stock": 15
+    },
+    {
+      "nombreProducto": "Tres Leches",
+      "precioUnitario": 21.5,
+      "stock": 2
+    },
+    {
+      "nombreProducto": "Tarta de Santiago",
+      "precioUnitario": 4.5,
+      "stock": 2
+    },
+    {
+      "nombreProducto": "Ópera",
+      "precioUnitario": 10.5,
+      "stock": 2
+    }]
+}
+
+

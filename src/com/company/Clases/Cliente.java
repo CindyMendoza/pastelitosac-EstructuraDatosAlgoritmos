@@ -2,30 +2,50 @@ package com.company.Clases;
 
 public class Cliente {
 
-    String idClinete, nombres, telefono, correo, direccion;
+    public String idCliente, nombreCompleto, celular, correo, direccion;
 
-    public String getIdClinete() {
-        return idClinete;
+    public Cliente(String idCliente, String nombreCompleto, String celular, String correo, String direccion) {
+        this.idCliente = idCliente;
+        this.nombreCompleto = nombreCompleto;
+        this.celular = celular;
+        this.correo = correo;
+        this.direccion = direccion;
     }
 
-    public void setIdClinete(String idClinete) {
-        this.idClinete = idClinete;
+    public Object[] getObjetRow(){
+        final Object[] row = new Object[5];
+
+        row[0] = nombreCompleto;
+        row[1] = idCliente;
+        row[2] = celular;
+        row[3] = correo;
+        row[4] = direccion;
+
+        return row;
     }
 
-    public String getNombres() {
-        return nombres;
+    public String getIdCliente() {
+        return idCliente;
     }
 
-    public void setNombres(String nombres) {
-        nombres = nombres;
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getCorreo() {
@@ -44,18 +64,4 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public Cliente() {
-        this.idClinete = idClinete;
-        this.nombres = nombres;
-        this.telefono = telefono;
-        this.correo = correo;
-        this.direccion = direccion;
-    }
-    public Cliente(String idClinete, String nombres, String telefono, String correo, String direccion) {
-        this.idClinete = idClinete;
-        this.nombres = nombres;
-        this.telefono = telefono;
-        this.correo = correo;
-        this.direccion = direccion;
-    }
 }
