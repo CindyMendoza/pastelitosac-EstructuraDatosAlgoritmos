@@ -1,12 +1,11 @@
 package com.company.Vista;
 
 import com.company.Clases.Usuario;
+import com.company.Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import static com.company.Main.Registrar;
 
 public class FrmLogin {
     private JPanel PanelLogin;
@@ -16,17 +15,13 @@ public class FrmLogin {
     private JButton BtnIngresar;
     private JButton btnCancelar;
     private JPanel JFont;
+    private JFrame frame = new JFrame();
 
     public JPanel getRootPanel() {
-
         return PanelLogin;
-
     }
+
     public FrmLogin(){
-
-
-        this.setContentPane();
-
         btnCancelar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,44 +46,35 @@ public class FrmLogin {
                 if (obj.getUsuario().isEmpty() || obj.getPassword().isEmpty()){
                     JOptionPane.showMessageDialog( null, "Los campos deben estar llenos");
                 }
-                else if(obj.getUsuario().equals("adm") && obj.getPassword().equals("123"))
+                else if(obj.getUsuario().equals("karen") && obj.getPassword().equals("123"))
                 {
-                    JOptionPane.showMessageDialog( null, "Bienvenidos");
+                    JOptionPane.showMessageDialog( null, "Bienvenida karen que tengas un excelente dia");
 
-                    FrmMenu ui = new FrmMenu();
-                    JPanel jp = ui.getRootPanel();
-                    JFrame frame = new JFrame();
-                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    frame.setContentPane(jp);
-                    frame.setLocationRelativeTo(null);
-                    frame.pack();
                     Registrar();
-                    frame.setVisible(false);
-
-
-                }
-
-
-                else {
-
+                    dispose();
+                } else {
                     JOptionPane.showMessageDialog( null, "Usuario y contraseña incorrecta");
-                    FrmMenu ui = new FrmMenu();
-                    JPanel jp = ui.getRootPanel();
-                    JFrame frame = new JFrame();
-                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    frame.setContentPane(jp);
-                    frame.pack();
-                    frame.setLocationRelativeTo(null);
-                    frame.setVisible(false);
-
                 }
             }
         });
-
     }
 
-
-    private void setContentPane() {
+    public void load () {
+        frame.add(PanelLogin);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setUndecorated(false);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setResizable(false);
     }
 
+    public void dispose(){
+        frame.dispose();
+    }
+
+    public void Registrar () {
+        FrmRegistrarCliente frmRegistrarCliente = new FrmRegistrarCliente();
+        frmRegistrarCliente.load();
+    }
 }

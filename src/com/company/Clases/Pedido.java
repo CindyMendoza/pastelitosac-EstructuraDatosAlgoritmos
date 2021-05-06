@@ -113,4 +113,7 @@ public class Pedido {
     public void setPedidoExpress(Boolean pedidoExpress) {
         this.pedidoExpress = pedidoExpress;
     }
+    public static void main(String[] args) {
+
+    }
 }

@@ -1,21 +1,24 @@
 package com.company.Vista;
 //Librería
 
+import com.company.Clases.Cliente;
 import com.company.Clases.Pedido;
 import com.company.Clases.Producto;
 import com.company.JSON.ReadJSON;
+import com.company.Main;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.Document;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
 public class FrmPedido {
     private JPanel PanelPedido;
-    private JButton txtBuscar;
+    private JButton btnMetricas;
     private JComboBox cmbProducto;
     private JTextField txtPrecio;
     private JTextField txtCantidad;
@@ -27,6 +30,8 @@ public class FrmPedido {
     private JCheckBox pedidoExpress;
     public  JTextField txtCliente;
     private JLabel imagenProducto;
+    private JFrame frame = new JFrame();
+    public ArrayList<Cliente> clientes;
 
     DefaultTableModel tbmodel = (DefaultTableModel) TbPedido.getModel();
 
@@ -109,10 +114,15 @@ public class FrmPedido {
         }
     }
 
-    public FrmPedido(){
+    public FrmPedido(ArrayList<Cliente> clientes){
 
         listar();
         agregarNombreProductos();
+
+        System.out.println("Clientes FrmPedido"+clientes.isEmpty());
+
+        //Clientes
+        this.clientes = clientes;
 
         // Agregar DocumentListener a campo de cantidad
         txtCantidad.getDocument().addDocumentListener(new DocumentListenerCantidad());
@@ -228,22 +238,6 @@ public class FrmPedido {
             }
         });
 
-        txtBuscar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                 new FrmListaCliente();
-                  FrmListaCliente ui = new FrmListaCliente();
-                JPanel jp = ui.getRootPanel();
-                JFrame frame = new JFrame();
-                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                frame.setContentPane(jp);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setVisible(true);
-
-            }
-        });
-
         TbPedido.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -257,12 +251,38 @@ public class FrmPedido {
                 cambio();
             }
         });
+
+        btnMetricas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Metricas();
+            }
+        });
+    }
+
+    public void load () {
+        frame.add(PanelPedido);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setSize(750, 600);
+        frame.setIconImage(new ImageIcon(Main.class.getResource("/img/cake.png")).getImage());
+        frame.setTitle("Pastelitos");
+    }
+
+    public void dispose(){
+        frame.dispose();
     }
 
     public void listar(){
         Object[] column = {"Cliente","Producto","Precio","Cantidad","PrecioTotal","Delivery"};
         tbmodel.setColumnIdentifiers(column);
         TbPedido.setModel(tbmodel);
+        TbPedido.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,12));
+        TbPedido.getTableHeader().setOpaque(false);
+        TbPedido.getTableHeader().setBackground(new Color(78,145,140));
+        TbPedido.setRowHeight(25);
 
         if(!pedidosOrdenados.isEmpty()){
             pedidosOrdenados = readJSON.ordenarPedidos(pedidos);
@@ -312,7 +332,6 @@ public class FrmPedido {
     }
 
     public void BorrarCampos(){
-        txtCliente.setText("");
         cmbProducto.setSelectedIndex(0);
         txtPrecio.setText("");
         txtCantidad.setText("");
@@ -333,11 +352,20 @@ public class FrmPedido {
             TbPedido.setValueAt(txtTotal.getText(), dto,4);
             TbPedido.setValueAt(pedidoExpress.isSelected(), dto,5);
 
+
+
             JOptionPane.showMessageDialog( null, "Se Actualizó correctamente");
 
         } else {
             JOptionPane.showMessageDialog( null, "Error al Actualizar");
         }
 
+    }
+
+    public void Metricas () {
+        System.out.println("Pedidos"+pedidos.isEmpty());
+        System.out.println("Clientes Metricas"+clientes.isEmpty());
+        FrmMetricas frmMetricas = new FrmMetricas(pedidos, this.clientes);
+        frmMetricas.load();
     }
 }

@@ -1,75 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17bba28e-9502-4bf9-b830-8b8282c7ab39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmListaCliente.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmListaCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/cake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/chees.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/conejo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/free2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/logo.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/ope.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/pastelito.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/santi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/tira.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/tres.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+    <list default="true" id="f0926007-179e-4dc1-ab96-f4fefddfd963" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_61.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Clases/ProductoMasDemandado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmMetricas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/Login.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RegistroPersonal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RegistroPersonal.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Empleados.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Pedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Pedido.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Producto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Producto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Clases/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Liberia/jcalendar-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/JSON/ReadJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/JSON/ReadJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/JSON/data.JSON" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/JSON/data.JSON" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmListClinte$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmListClinte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmListaCliente$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmListaCliente$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmListaCliente.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin$imgLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmLogin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmMenu.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$DocumentListenerCantidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido$DocumentListenerCantidad.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmPedido.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarEmpleados.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/img/Login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Clases/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Clases/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Clases/Empleados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/company/Vista/FrmRegistrarCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/img/chees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/img/chees.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/img/ope.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/img/ope.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RegistroPersonal/img/tres.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RegistroPersonal/img/tres.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Clases/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Clases/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Clases/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Clases/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Liberia/jcalendar-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/JSON/data.JSON" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/JSON/data.JSON" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmListClinte.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmListClinte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmLogin.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmLogin.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmListaCliente.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmListaCliente.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmMenu.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmPedido.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmPedido.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmPedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarEmpleados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarEmpleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/img/Login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/Login.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Vista/FrmRegistrarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/chees.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/chees.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/ope.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/ope.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/tres.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/tres.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,32 +72,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1s0In9UWnlGveSvhzu9yg3Duzgt" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1s8biq7wWysABk4NsCsz74qGgMj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="282" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/company/Lib/gson-2.8.6.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\RegistroPersonal\src\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\RegistroPersonal\src\img" />
-      <recent name="C:\Users\User\Desktop\RegistroPersonal\src\com\company\img" />
-    </key>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Pedido">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="RegistroPersonal" />
@@ -118,8 +103,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Metricas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Clases.Metricas" />
+      <module name="RegistroPersonal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Clases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pedido" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.Clases.Pedido" />
+      <module name="RegistroPersonal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Clases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Pedido" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Metricas" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Metricas" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -127,24 +144,56 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="17bba28e-9502-4bf9-b830-8b8282c7ab39" name="Default Changelist" comment="" />
-      <created>1620003247493</created>
+      <changelist id="f0926007-179e-4dc1-ab96-f4fefddfd963" name="Default Changelist" comment="" />
+      <created>1620257294002</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1620003247493</updated>
+      <updated>1620257294002</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  <component name="WindowStateProjectService">
+    <state x="565" y="16" width="1092" height="757" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620271380033">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="16" width="1092" height="757" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620271380033" />
+    <state x="1301" y="211" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1620271236081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1301" y="211" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620271236081" />
+    <state x="840" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1620271378794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="840" y="184" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620271378794" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1620273542795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620273542795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1620273542795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620273542795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1620273542795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620273542795" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1620273542795">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620273542795" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/Clases/Metricas.java</url>
+          <line>20</line>
+          <properties class="com.company.Clases.Metricas" method="sumaMontoTotalPedidos">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

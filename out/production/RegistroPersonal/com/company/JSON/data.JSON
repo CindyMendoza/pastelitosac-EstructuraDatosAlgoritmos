@@ -1,38 +1,75 @@
 {
-  "pedidos": [{
-  "nombreCliente": "Joe",
-  "idCliente": 54874541,
-  "nombreProducto": "Torta1",
-  "idPedido": "dfsdfasd212312",
-  "precioUnitario": 20,
-  "cantidad": 12,
-  "total": 10.0,
-  "pedidoExpress": false
+  "pedidos": [
+    {
+    "nombreCliente": "Juan Peréz",
+    "idCliente": 54874541,
+    "nombreProducto": "Tiramisú",
+    "idPedido": "dfsdfasd212312",
+    "precioUnitario": 20,
+    "cantidad": 12,
+    "total": 240.0,
+    "pedidoExpress": false
 },
   {
-  "nombreCliente": "Joe",
+  "nombreCliente": "Juan Peréz",
   "idCliente": 54874541,
-  "nombreProducto": "Torta1",
+  "nombreProducto": "Tiramisú",
   "idPedido": "dfsdfasd212312",
-  "precioUnitario": 20,
+  "precioUnitario": 10,
   "cantidad": 12,
   "total": 120.0,
   "pedidoExpress": false
-  }
+  },
+    {
+      "nombreCliente": "Vickbart",
+      "idCliente": 98746544,
+      "nombreProducto": "Cheesecake",
+      "idPedido": "dfsdfasd212312",
+      "precioUnitario": 30.5,
+      "cantidad": 1,
+      "total": 30.5,
+      "pedidoExpress": false
+    },
+    {
+      "nombreCliente": "Vickbart",
+      "idCliente": 98746544,
+      "nombreProducto": "Tres Leches",
+      "idPedido": "dfsdfasd212312",
+      "precioUnitario": 21.5,
+      "cantidad": 5,
+      "total": 107.5,
+      "pedidoExpress": false
+    }, {
+      "nombreCliente": "Cindy",
+    "idCliente": 234745432,
+    "nombreProducto": "Tiramisú",
+    "idPedido": "dfsdfasd212312",
+    "precioUnitario": 20,
+    "cantidad": 12,
+    "total": 240.0,
+    "pedidoExpress": false
+    }
 ],
 "clientes": [{
   "nombreCompleto": "Juan Peréz",
-  "idCliente":  "45879878",
+  "idCliente":  "54874541",
   "celular":  "95478457",
   "correo":  "jperez@casa.com",
   "direccion":  "Av. Huarochirí"
 },
   {
     "nombreCompleto": "Vickbart",
-    "idCliente":  "45787112",
+    "idCliente":  "98746544",
     "celular":  "87445754",
     "correo":  "vickbart@pastelito.com",
     "direccion":  "Av. Los Ruiseñores"
+  },
+  {
+    "nombreCompleto": "Cindy",
+    "idCliente":  "234745432",
+    "celular":  "95478457",
+    "correo":  "cindy@casa.com",
+    "direccion":  "Av. Huarochirí"
   }
 ],
   "productos": [

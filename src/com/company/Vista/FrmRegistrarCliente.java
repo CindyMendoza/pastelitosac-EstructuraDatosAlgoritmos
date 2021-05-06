@@ -4,6 +4,7 @@ package com.company.Vista;
 
 import com.company.Clases.Cliente;
 import com.company.JSON.ReadJSON;
+import com.company.Main;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -32,7 +33,9 @@ public class FrmRegistrarCliente {
     private JButton btnGuardar;
     private JButton btnEliminar;
     private JButton btnBuscar;
-    private JButton btnListar;
+    private JButton btnCrearPedido;
+    private JButton btnBorrarCampos;
+    private JFrame frame = new JFrame();
 
     //Manejar datos de JSON y listado de clientes
     ArrayList<Cliente> clientes = new ArrayList<>();
@@ -54,8 +57,8 @@ public class FrmRegistrarCliente {
             public void actionPerformed(ActionEvent e) {
                 //Crear nuevo objeto cliente y añadirlo al arrayList
                 Cliente cliente = new Cliente(
-                        txtNombre.getText(),
                         txtDNI.getText(),
+                        txtNombre.getText(),
                         txtCelular.getText(),
                         txtCorreo.getText(),
                         txtDireccion.getText());
@@ -113,7 +116,9 @@ public class FrmRegistrarCliente {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int dto = TbCliente.getSelectedRow();
+
                 if (dto>=0){
+                    clientes.remove(dto);
                     tbmodel.removeRow(dto);
                     JOptionPane.showMessageDialog( null, "Se elimino correctamente"+ dto);
                 }else {
@@ -128,16 +133,52 @@ public class FrmRegistrarCliente {
                 Buscar();
             }
         });
-        btnListar.addActionListener(new ActionListener() {
+
+        btnCrearPedido.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pasarData();
+                if(clientes.isEmpty()){
+                    clientes = readJSON.getClientes(clientes);
+                }
 
+                FrmPedido frmPedido = new FrmPedido(clientes);
+                frmPedido.load();
+
+                int i = TbCliente.getSelectedRow();
+                System.out.println(TbCliente.getModel());
+                System.out.println("indice"+i);
+                frmPedido.txtCliente.setText(TbCliente.getValueAt(i,0).toString());
+            }
+        });
+
+        btnBorrarCampos.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BorrarCampos();
             }
         });
     }
 
+    public void load () {
+        frame.add(panelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setUndecorated(false);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setResizable(false);
+        frame.setSize(750, 600);
+
+        frame.setIconImage(new ImageIcon(Main.class.getResource("/img/cake.png")).getImage());
+        frame.setTitle("Pastelitos");
+    }
+
+    public void dispose(){
+        frame.dispose();
+    }
+
     public void BorrarCampos(){
+        txtBuscar.setText((""));
         txtNombre.setText("");
         txtDNI.setText("");
         txtDireccion.setText("");
@@ -198,35 +239,6 @@ public class FrmRegistrarCliente {
         } catch (Exception e) {
             JOptionPane.showMessageDialog( null, "Error al Buscar");
         }
-
-    }
-
-    public void pasarData(){
-
-        FrmListaCliente ui = new FrmListaCliente();
-        JPanel jp = ui.getRootPanel();
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setContentPane(jp);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-
-        DefaultTableModel model=(DefaultTableModel)ui.TbListaCliente.getModel();
-
-        int rows = TbCliente.getRowCount();
-
-        for (int i=2; i<rows; i++) {
-            final Object[] row = new Object[5];
-            row[0]=TbCliente.getValueAt(i,0).toString();
-            row[1]=TbCliente.getValueAt(i,1).toString();
-            row[2]=TbCliente.getValueAt(i,2).toString();
-            row[3]=TbCliente.getValueAt(i,3).toString();
-            row[4]=TbCliente.getValueAt(i,4).toString();
-            model.addRow(row);
-        }
-
-        ui.TbListaCliente.setModel(model);
 
     }
 }
